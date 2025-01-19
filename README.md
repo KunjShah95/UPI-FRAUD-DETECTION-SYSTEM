@@ -41,15 +41,28 @@ We welcome contributions from the community! Follow these steps to contribute:
 
 Fork the Repository: Click on the fork button at the top right corner.
 
-Clone the Repository: git clone https://github.com/your-username/UPI-FRAUD-DETECTION-SYSTEM.git
+Clone the Repository: 
+```
+git clone https://github.com/your-username/UPI-FRAUD-DETECTION-SYSTEM.git
+```
 
-Create a Branch: git checkout -b feature-branch
+Create a Branch: 
+```
+git checkout -b feature-branch
+```
 
-Make Your Changes: Implement your feature or fix a bug.
+Make Your Changes:
 
-Commit and Push: git commit -m "Your commit message" and git push origin feature-branch
+Implement your feature or fix a bug.
 
-Create a Pull Request: Go to the repository on GitHub and create a pull request.
+Commit and Push: 
+```
+git commit -m "Your commit message" and git push origin feature-branch
+```
+
+Create a Pull Request:
+
+Go to the repository on GitHub and create a pull request.
 
 Contact 📧
 For any queries or issues, feel free to reach out to us via GitHub Issues.
