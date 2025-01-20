@@ -69,5 +69,6 @@ git push origin feature-branch
 Go to the repository on GitHub and create a pull request.
 
 Contact 📧
+
 For any queries or issues, feel free to reach out to us via GitHub Issues.
 
