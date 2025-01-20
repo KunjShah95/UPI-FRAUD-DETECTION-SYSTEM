@@ -9,9 +9,11 @@ UPI Fraud Detection System 🚨
 
 
 Introduction 📖
+
 Welcome to the UPI Fraud Detection System! This repository is dedicated to detecting fraudulent activities in Unified Payments Interface (UPI) transactions. The system leverages machine learning techniques to identify suspicious transactions in real-time.
 
 Features ✨
+
 Real-time Fraud Detection: Monitors transactions in real-time and flags suspicious activities. This ensures immediate action can be taken to prevent fraudulent transactions.
 
 Machine Learning Models: Utilizes advanced ML algorithms to predict fraudulent behavior. These models are trained on historical transaction data to identify patterns indicative of fraud.
