@@ -52,7 +52,7 @@ We welcome contributions from the community! Follow these steps to contribute:
 
 2. Clone the Repository:
 ```
-git clone https://github.com/your-username/UPI-FRAUD-DETECTION-SYSTEM.git
+git clone https://github.com/KunjShah95/UPI-FRAUD-DETECTION-SYSTEM.git
 ```
 3. Create a Branch:
 ```
