@@ -1,0 +1,24 @@
+# UPI Fraud Detection System - Requirements
+# Fixed package versions to resolve compatibility issues
+
+# Core data science libraries
+pandas>=1.5.0
+numpy>=1.21.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Interactive visualization
+plotly>=5.0.0
+
+# Machine learning libraries
+scikit-learn>=1.1.0,<1.4.0
+xgboost>=1.6.0
+imbalanced-learn>=0.9.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Additional utilities
+warnings
+pickle-mixin
