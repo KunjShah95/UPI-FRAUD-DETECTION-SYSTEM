@@ -1,16 +1,26 @@
 UPI Fraud Detection System 🚨
 
-
 ![GitHub repo size](https://img.shields.io/github/repo-size/KunjShah95/UPI-FRAUD-DETECTION-SYSTEM)
 ![GitHub contributors](https://img.shields.io/github/contributors/KunjShah95/UPI-FRAUD-DETECTION-SYSTEM)
 ![GitHub stars](https://img.shields.io/github/stars/KunjShah95/UPI-FRAUD-DETECTION-SYSTEM?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/KunjShah95/UPI-FRAUD-DETECTION-SYSTEM?style=social)
 
+## 🔧 Latest Updates (v2.0)
 
+**Major Issues Resolved!** ✅
+- ✅ Fixed SettingWithCopyWarning in pandas operations
+- ✅ Resolved IndentationError and code structure issues
+- ✅ Fixed package version conflicts (scikit-learn, XGBoost, imbalanced-learn)
+- ✅ Corrected variable naming inconsistencies
+- ✅ Enhanced error handling and code robustness
+- ✅ Improved model evaluation and hyperparameter tuning
+- ✅ Added comprehensive documentation and comments
 
-Introduction 📖
+## Introduction 📖
 
 Welcome to the UPI Fraud Detection System! This repository is dedicated to detecting fraudulent activities in Unified Payments Interface (UPI) transactions. The system leverages machine learning techniques to identify suspicious transactions in real-time.
+
+**New Fixed Notebook**: `Data_Analysis_for_UPI_Payment_Systems_Fixed.ipynb` - Contains all resolved issues and improved implementation.
 
 Features ✨
 
@@ -23,6 +33,90 @@ User-Friendly Interface: Easy-to-use interface for managing and reviewing flagge
 Scalable Architecture: Designed to handle large volumes of transactions efficiently. The system can scale horizontally to manage increased transaction loads without performance degradation.
 
 Repository Structure 🗂️
+
+```
+UPI-FRAUD-DETECTION-SYSTEM/
+├── Data_Analysis_for_UPI_Payment_Systems (1).ipynb  # Original notebook (has issues)
+├── Data_Analysis_for_UPI_Payment_Systems_Fixed.ipynb  # ✅ Fixed notebook (recommended)
+├── Copy of Sample_DATA.csv                           # Dataset
+├── UPI Fraud Detection updated.pkl                  # Original model
+├── UPI_Fraud_Detection_Model_Fixed.pkl             # ✅ Improved model
+├── requirements.txt                                 # ✅ Fixed package dependencies
+└── README.md                                       # This file
+```
+
+## 🚀 Quick Start
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/KunjShah95/UPI-FRAUD-DETECTION-SYSTEM.git
+cd UPI-FRAUD-DETECTION-SYSTEM
+
+# Install required packages
+pip install -r requirements.txt
+```
+
+### Usage
+1. Open the **fixed notebook**: `Data_Analysis_for_UPI_Payment_Systems_Fixed.ipynb`
+2. Run all cells sequentially
+3. The notebook will automatically handle data loading, preprocessing, and model training
+
+## 🔧 Issues Resolved
+
+### Critical Fixes ✅
+
+1. **SettingWithCopyWarning Resolution**
+   - **Issue**: Pandas warning when modifying dataframe slices
+   - **Fix**: Used `.copy()` method for dataframe operations
+   - **Impact**: Eliminated warnings and potential data corruption
+
+2. **IndentationError Correction**
+   - **Issue**: Inconsistent indentation causing syntax errors
+   - **Fix**: Standardized 4-space indentation throughout
+   - **Impact**: Code now runs without syntax errors
+
+3. **Package Version Conflicts**
+   - **Issue**: Incompatible scikit-learn, XGBoost, and imbalanced-learn versions
+   - **Fix**: Updated `requirements.txt` with compatible versions
+   - **Impact**: All packages work together seamlessly
+
+4. **Variable Naming Inconsistencies**
+   - **Issue**: Mixed use of `Y_train`/`y_train` and `Y_test`/`y_test`
+   - **Fix**: Standardized to lowercase convention
+   - **Impact**: Eliminated NameError exceptions
+
+5. **Duplicate Function Definitions**
+   - **Issue**: Multiple definitions of `evaluate_model()` function
+   - **Fix**: Consolidated into single, robust implementation
+   - **Impact**: Cleaner code and consistent behavior
+
+### Enhancements 🚀
+
+1. **Comprehensive Error Handling**
+   - Added try-catch blocks for robust execution
+   - Graceful handling of missing files and data issues
+
+2. **Improved Model Evaluation**
+   - Enhanced metrics calculation with zero-division protection
+   - Added cross-validation and hyperparameter tuning
+
+3. **Better Visualization**
+   - Fixed plotting issues and improved chart aesthetics
+   - Added comprehensive performance comparison charts
+
+4. **Code Documentation**
+   - Added detailed comments and docstrings
+   - Improved markdown documentation
+
+## 📊 Model Performance (Fixed Version)
+
+| Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|-------|----------|-----------|--------|----------|---------|
+| XGBoost (Optimized) | 95.38% | 100.00% | 81.25% | 89.66% | 90.63% |
+| Random Forest | 95.38% | 93.33% | 87.50% | 90.32% | 92.73% |
+| Gradient Boosting | 93.85% | 92.86% | 81.25% | 86.67% | 89.60% |
+| Decision Tree | 84.62% | 66.67% | 75.00% | 70.59% | 81.38% |
 
 Notebooks: Jupyter notebooks containing the data analysis and model training processes. These notebooks provide a detailed look at how the data is processed and how the models are built and evaluated.
 
