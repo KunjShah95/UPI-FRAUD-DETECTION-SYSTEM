@@ -9,9 +9,11 @@ seaborn>=0.11.0
 
 # Interactive visualization
 plotly>=5.0.0
+streamlit>=1.30.0
 
 # Machine learning libraries
-scikit-learn>=1.1.0,<1.4.0
+# NOTE: Model artifact was serialized with scikit-learn 1.6.1
+scikit-learn==1.6.1
 xgboost>=1.6.0
 imbalanced-learn>=0.9.0
 
@@ -20,5 +22,4 @@ jupyter>=1.0.0
 ipykernel>=6.0.0
 
 # Additional utilities
-warnings
 pickle-mixin
