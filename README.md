@@ -1,156 +1,109 @@
 # 🚨 UPI Fraud Detection System
 
-![Repo Size](https://img.shields.io/github/repo-size/KunjShah95/UPI-FRAUD-DETECTION-SYSTEM)
+![UPI Fraud Detection Banner](https://img.shields.io/github/repo-size/KunjShah95/UPI-FRAUD-DETECTION-SYSTEM)
 ![Contributors](https://img.shields.io/github/contributors/KunjShah95/UPI-FRAUD-DETECTION-SYSTEM)
 ![Stars](https://img.shields.io/github/stars/KunjShah95/UPI-FRAUD-DETECTION-SYSTEM?style=social)
 ![Forks](https://img.shields.io/github/forks/KunjShah95/UPI-FRAUD-DETECTION-SYSTEM?style=social)
 
-A modern Streamlit-based machine learning app for detecting potentially fraudulent UPI transactions in both **single** and **batch** modes.
+A robust, production-ready machine learning web application for real-time detection of fraudulent UPI transactions. Built with Python, Streamlit, and scikit-learn.
 
 ---
 
-## ✨ What’s inside
-
-- **Single Transaction Prediction** with validation and fraud probability display.
-- **Batch CSV Prediction** with downloadable prediction output.
-- **Risk Insights Dashboard** with rich analytics charts.
-- **Top Navbar Navigation** (Overview, Single, Batch, Risk Insights, Recent Activity).
-- **Dark/Light Theme Toggle** in sidebar.
-- **Export Buttons** for risk insights summary and high-risk transactions.
-- **Model Performance Panel** in sidebar (Accuracy, F1, ROC-AUC).
-
----
-
-## 🧱 Tech Stack
-
-- Python
-- Streamlit
-- scikit-learn
-- Plotly
-- Pandas / NumPy
+## ✨ Features
+- **Real-time Fraud Detection:** Instantly flag suspicious UPI transactions.
+- **Batch Prediction:** Upload CSV files for bulk fraud analysis.
+- **Modern Streamlit UI:** Clean, responsive, and user-friendly interface.
+- **Model Performance Metrics:** See accuracy, F1-score, and ROC-AUC in-app.
+- **Input Validation:** Prevents invalid or incomplete submissions.
+- **Recent Predictions Table:** Track your latest checks.
+- **Comprehensive Error Handling:** User-friendly error messages throughout.
 
 ---
 
-## 📁 Current project structure
+## 🚀 Quick Start
 
-```text
-UPI-FRAUD-DETECTION-SYSTEM/
-├── main.py
-├── requirements.txt
-├── UPI Fraud Detection updated.pkl
-├── DEPLOYMENT.md
-├── Data_Analysis_for_UPI_Payment_System.ipynb
-├── Copy of Sample_DATA.csv
-└── README.md
-```
-
-> Note: `main.py` at the repository root is the active app entrypoint.
-
----
-
-## 🚀 Quick Start (Local)
-
-### 1) Clone and install
-
+### 1. Clone & Install
 ```bash
 git clone https://github.com/KunjShah95/UPI-FRAUD-DETECTION-SYSTEM.git
 cd UPI-FRAUD-DETECTION-SYSTEM
-pip install -r requirements.txt
+pip install -r webapp/requirements.txt
 ```
 
-### 2) Run the app
-
+### 2. Launch the App
 ```bash
+cd webapp
 streamlit run main.py
 ```
 
-### 3) Use the app
-
-- Go to **Single Prediction** for instant checks.
-- Go to **Batch Analytics** to upload CSV and generate predictions.
-- Go to **Risk Insights** for advanced visual analysis.
+### 3. Predict Fraud
+- **Single Transaction:** Fill out the form and click **Predict**.
+- **Batch Prediction:** Upload a CSV with the required columns and download results.
 
 ---
 
-## 📊 Visual Analytics available
-
-Depending on available columns in your uploaded CSV, the app renders charts such as:
-
-- Fraud vs Legit distribution
-- Amount distribution by prediction
-- Fraud probability distribution
-- Prediction by payment gateway
-- Risk band distribution
-- Transaction type breakdown
-- Amount vs frequency scatter
-- Age distribution by prediction
-
-The app includes fallback logic for column naming differences (e.g., `location`, `city`, `region`).
-
----
-
-## 🧠 Model & Pipeline
-
-- Training/analysis notebook: `Data_Analysis_for_UPI_Payment_System.ipynb`
-- Saved artifact: `UPI Fraud Detection updated.pkl`
-  - Contains model, scaler, feature columns, and optional metrics
-- Dependency pin:
-  - `scikit-learn==1.6.1` (required for artifact compatibility)
-
----
-
-## 🗂️ Input expectations
-
-- **Single Prediction:** Use app form fields.
-- **Batch Prediction:** Upload CSV with transaction fields compatible with training schema.
-
-If some columns are missing, the app still attempts prediction by aligning encoded features with the model’s required columns.
-
----
-
-## ☁️ Deployment
-
-See [`DEPLOYMENT.md`](./DEPLOYMENT.md) for complete platform-wise instructions:
-
-- Streamlit Community Cloud
-- Render
-- Railway
-- Azure App Service
-
-It also includes a dedicated section on handling the `.pkl` file safely in production.
-
----
-
-## ✅ Pre-run checklist
-
-- `requirements.txt` installed
-- `UPI Fraud Detection updated.pkl` present in root
-- `main.py` runs without syntax errors
-
-Quick smoke test:
-
-```bash
-python -m py_compile main.py
-streamlit run main.py
+## 🏗️ Project Structure
 ```
+UPI-FRAUD-DETECTION-SYSTEM/
+├── Copy of Sample_DATA.csv
+├── Data_Analysis_for_UPI_Payment_System.ipynb
+├── UPI Fraud Detection updated.pkl
+├── webapp/
+│   ├── app.py
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── run_production.py
+│   └── templates/
+│       └── index.html
+└── README.md
+```
+
+---
+
+## 🧠 Model Training & Pipeline
+- **Notebook:** `Data_Analysis_for_UPI_Payment_System.ipynb`
+- **Preprocessing:**
+  - Drops unnecessary columns
+  - One-hot encodes categorical variables
+  - Scales features with `StandardScaler`
+- **Model:** Trained with Random Forest, XGBoost, and more. Best model, scaler, and feature columns saved in `UPI Fraud Detection updated.pkl`.
+
+---
+
+## 📊 Model Performance
+| Model                | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|----------------------|----------|-----------|--------|----------|---------|
+| XGBoost (Optimized)  | 95.38%   | 100.00%   | 81.25% | 89.66%   | 90.63%  |
+| Random Forest        | 95.38%   | 93.33%    | 87.50% | 90.32%   | 92.73%  |
+| Gradient Boosting    | 93.85%   | 92.86%    | 81.25% | 86.67%   | 89.60%  |
+| Decision Tree        | 84.62%   | 66.67%    | 75.00% | 70.59%   | 81.38%  |
+
+---
+
+## 📂 Input Data Format
+- **Single Prediction:** Use the form fields in the app.
+- **Batch Prediction:** CSV must match the columns used in model training (see notebook for details).
+
+---
+
+## 📝 Notes
+- Ensure your input data matches the columns and preprocessing used during model training.
+- Retrain and resave the model if you add new features or categories.
+- For best results, use the provided notebook for data analysis and model retraining.
 
 ---
 
 ## 🤝 Contributing
-
 1. Fork the repository
 2. Create a feature branch
 3. Commit your changes
-4. Open a Pull Request
+4. Open a pull request
 
 ---
 
-## 📬 Support
-
-For issues/suggestions, open a GitHub issue in this repository.
+## 📧 Contact
+For questions or support, open an issue on GitHub.
 
 ---
 
 ## 🪪 License
-
 MIT License
