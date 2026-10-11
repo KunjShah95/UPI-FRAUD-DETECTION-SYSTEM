@@ -107,3 +107,11 @@ For questions or support, open an issue on GitHub.
 
 ## 🪪 License
 MIT License
+
+---
+
+## Case study
+
+The full write-up of UPI Fraud Guard (problem, architecture, trade-offs and results) lives at **[kunjshah.in/projects/upi-fraud-guard](https://kunjshah.in/projects/upi-fraud-guard)**.
+
+Built by [Kunj Shah](https://kunjshah.in), AI engineer.
